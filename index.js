@@ -7,8 +7,10 @@ console.log(process.env);
 
 const express = require('express');
 const app = express();
+
+const port = process.env.PORT || 3000;
 // this is 3000 is aport number
-app.listen(3000, () => console.log('listening at 3000'));
+app.listen(port, () => console.log(`Starting server at ${port}`));
 
 // this is use to connect html file which is in folder called public because it is accesseble to everyone
 app.use(express.static('public'));
